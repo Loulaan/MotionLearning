@@ -90,5 +90,5 @@ class Ui_AboutDialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "About"))
-        self.label.setText(_translate("Dialog", "Made in 1304"))
-        self.label_2.setText(_translate("Dialog", "by Fridge (v 0.1.1)"))
+        self.label.setText(_translate("Dialog", "Made in 12"))
+        self.label_2.setText(_translate("Dialog", "by Fridge & Loulaan (v 0.1.2)"))

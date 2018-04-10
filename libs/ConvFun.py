@@ -111,30 +111,30 @@ def ConvPilot(frame, modeF, modeS):
 
 
 def setFlagF(GUI):
-    if GUI.settings.ui.radioButton.isChecked():
+    if GUI.settings.ui.vRBf_1.isChecked():
         mode = 0
-    if GUI.settings.ui.radioButton_2.isChecked():
+    if GUI.settings.ui.vRBf_2.isChecked():
         mode = 1
-    if GUI.settings.ui.radioButton_3.isChecked():
+    if GUI.settings.ui.vRBf_3.isChecked():
         mode = 2
-    if GUI.settings.ui.radioButton_4.isChecked():
+    if GUI.settings.ui.vRBf_4.isChecked():
         mode = 3
-    if GUI.settings.ui.radioButton_5.isChecked():
+    if GUI.settings.ui.vRBf_5.isChecked():
         mode = 4
-    if GUI.settings.ui.radioButton_6.isChecked():
+    if GUI.settings.ui.vRBf_6.isChecked():
         mode = 5
-    if GUI.settings.ui.radioButton_8.isChecked():
+    if GUI.settings.ui.vRBf_7.isChecked():
         mode = 6
     return mode
 
 def setFlagS(GUI):
-    if GUI.settings.ui.radioButton_7.isChecked():
+    if GUI.settings.ui.vRBs_1.isChecked():
         mode = 7
-    if GUI.settings.ui.radioButton_9.isChecked():  # Поиск людей
+    if GUI.settings.ui.vRBs_2.isChecked():  # Поиск людей
         mode = 8
-    if GUI.settings.ui.radioButton_12.isChecked():  # Контур тренера
+    if GUI.settings.ui.vRBs_4.isChecked():  # Контур тренера
         mode = 9
-    if GUI.settings.ui.radioButton_16.isChecked():  # None
+    if GUI.settings.ui.vRBs_5.isChecked():  # None
         mode = 10
 
     return mode

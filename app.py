@@ -55,7 +55,7 @@ class MyWin(QtWidgets.QMainWindow):
         self.dSP.ui.toolButton.clicked.connect(lambda: ChangePath(self))
         self.settings.ui.pushButton.clicked.connect(lambda: ConfirmSettings(self))
         self.settings.ui.pushButton_2.clicked.connect(lambda: ConfirmSettings(self))
-        self.settings.ui.radioButton_14.toggled.connect(lambda: EnabledSpinBox(self))
+        self.settings.ui.aRBf_1.toggled.connect(lambda: EnabledSpinBox(self))
 
     # Thread functions
     def TextPBChange(self, s):

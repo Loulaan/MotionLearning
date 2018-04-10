@@ -26,7 +26,7 @@ def MLConv(self, GUI):
     
     GUI.settings.setEnabled(False)
 
-    if GUI.settings.ui.radioButton_14.isChecked():
+    if GUI.settings.ui.aRBf_1.isChecked():
         GUI.ath.start()
 
     fourcc = cv2.VideoWriter_fourcc(*'XVID')  # устанавливаем видео кодек
@@ -73,7 +73,7 @@ def MLConv(self, GUI):
     vid.release()  # закрываем запись
     self.StatusBarSignal.emit('Final touches')
 
-    if GUI.settings.ui.radioButton_14.isChecked():
+    if GUI.settings.ui.aRBf_1.isChecked():
         while GUI.ath.isRun:
             pass
 
@@ -90,8 +90,9 @@ def AudioConv(self, GUI):
     y, sr = librosa.load("temp\\TempAudio.wav", sr=None, mono=False)
     y1, y2 = y[0], y[1]
     shift = GUI.settings.ui.spinBox.value()
-    y_shifted1 = librosa.effects.pitch_shift(y1, sr, n_steps=shift) # shifted by -0.1 half steps
-    y_shifted2 = librosa.effects.pitch_shift(y2, sr, n_steps=shift) # shifted by -0.1 half steps
+    fShift = float(shift) / 100
+    y_shifted1 = librosa.effects.pitch_shift(y1, sr, n_steps=fShift) # shifted by -0.1 half steps
+    y_shifted2 = librosa.effects.pitch_shift(y2, sr, n_steps=fShift) # shifted by -0.1 half steps
     new = np.array([y_shifted1, y_shifted2])
     librosa.output.write_wav('temp\\TempAudio.wav', new, sr)
     self.isRun = False

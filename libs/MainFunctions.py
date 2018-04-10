@@ -103,4 +103,4 @@ def ConfirmSettings(self):
     self.settings.close()
 
 def EnabledSpinBox(self):
-    self.settings.ui.spinBox.setEnabled( self.settings.ui.radioButton_14.isChecked() )
+    self.settings.ui.spinBox.setEnabled( self.settings.ui.aRBf_1.isChecked() )
